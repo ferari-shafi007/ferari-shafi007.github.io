@@ -34,67 +34,35 @@
       src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"
       defer
     ></script>
+    <!-- custom js starts here -->
     <script src="./script.js" defer></script>
+    <script src="assets/mouseTail.js" defer></script>
   </head>
   <body>
     <div data-scroll-container id="main" class="main">
+      <div id="mouseTail"></div>
       <header>
-        <nav class="navbar bg-body-tertiary fixed-top navbar-expand-md">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Shafi</a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="offcanvas offcanvas-end"
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                  Shafi
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                   <li class="nav-item">
-                    <a class="nav-link" href="#">My Works</a>
-                  </li>
-                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <nav>
+          <div class="logo">
+            <a href="#">
+              <!-- <img src="assets/img/shafi-white.png" alt=""> -->
+               <h1 class="logo-text">Shafi</h1>
+            </a>
           </div>
+          <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
       </header>
       <section id="hero">
-
+        <div class="hero-content">
+          <h1 class="hero-title">Hi, I'm Shafi</h1>
+          <p class="hero-subtitle">A passionate web developer.</p>
+          <a href="#projects" class="hero-link">View My Work</a>
+        </div>
       </section>
     <div class="main" id="main">
       
