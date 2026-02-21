@@ -1,1 +1,3 @@
-const locomotiveScroll = new LocomotiveScroll();
+const $locomotiveScrollContainer = document.querySelector(
+  "#locomotive-scroll-container",
+);
