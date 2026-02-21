@@ -21,8 +21,7 @@ tl.from(
 ); // Start this animation 0.5 seconds before the previous one ends
 // After the animation is complete, hide the welcome screen
 tl.to(welcomescreen, {
-  duration: 3,
-  opacity: 0,
+  duration: 2,
   pointerEvents: "none",
   y: -1000,
   delay: 2,
