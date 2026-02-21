@@ -137,3 +137,7 @@ nav ul li a:hover {
     color 0.3s ease;
   transform: scale(1.1);
 }
+#about {
+  height: 100vh;
+  background-color: var(--background-color);
+}
