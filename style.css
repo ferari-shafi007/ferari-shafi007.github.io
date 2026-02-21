@@ -33,17 +33,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
-  background: var(--light);
-  text-align: center;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 40px;
-=======
   gap: 20px;
 }
 #welcome .welcome-text {
@@ -59,18 +48,16 @@ body {
 }
 #mouseTail {
   position: fixed;
-  top: 100px;
-  left: 100px;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
-  background-color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  will-change: left, top;
-  transition:
-    left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 999;
 }
 
 nav {
@@ -149,5 +136,4 @@ nav ul li a:hover {
     all 0.3s ease,
     color 0.3s ease;
   transform: scale(1.1);
->>>>>>> ebba08a63f11fe3054c5c6bd4c41882a7a5a7293
 }
