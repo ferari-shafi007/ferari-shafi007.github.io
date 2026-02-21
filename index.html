@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shafi | Portfolio</title>
     <!-- all css libraries starts here -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
@@ -37,6 +38,8 @@
     <!-- custom js starts here -->
     <script src="./script.js" defer></script>
     <script src="assets/mouseTail.js" defer></script>
+    <script src="assets/menu.js"></script>
+
     <script src="assets/gsap.js" defer></script>
   </head>
   <body>
@@ -54,15 +57,21 @@
                <h1 class="logo-text">Shafi</h1>
             </a>
           </div>
+          <i class="fa-solid fa-bars-staggered"></i>
+          
+        </nav>
+        
+      </header>
+      <section id="hero">
+        <div id="menu">
           <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </nav>
-      </header>
-      <section id="hero">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
         <div class="hero-content">
           <h1 class="hero-title">Hi, I'm Shafi</h1>
           <p class="hero-subtitle">A passionate web developer.</p>
@@ -73,5 +82,6 @@
     <div class="main" id="main">
       
     </div>
+
   </body>
 </html>
