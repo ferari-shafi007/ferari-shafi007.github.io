@@ -108,7 +108,7 @@ nav ul li a:hover {
   position: fixed;
   top: 0;
   right: 0;
-  width: 40%;
+  width: 25%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.39);
   backdrop-filter: blur(10px);
@@ -116,7 +116,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
 }
 #menu ul {
   list-style: none;

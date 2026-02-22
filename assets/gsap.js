@@ -21,11 +21,38 @@ tl.from(
 ); // Start this animation 0.5 seconds before the previous one ends
 // After the animation is complete, hide the welcome screen
 tl.to(welcomescreen, {
-  duration: 2,
+  duration: 1,
   pointerEvents: "none",
   y: -1000,
-  delay: 2,
+  delay: 0.5,
   onComplete: function () {
     welcomescreen.style.display = "none";
   },
+});
+
+// menu code starts here
+var menu = document.querySelector("#menu");
+var openMenuBtn = document.querySelector(".fa-bars-staggered");
+var closeMenuBtn = document.querySelector(".fa-xmark");
+var menuItems = document.querySelectorAll(".nav-links li");
+let menuTl = gsap.timeline({ paused: true });
+openMenuBtn.addEventListener("click", function () {
+  menuTl.play();
+});
+menuTl.from(menu, {
+  duration: 0.5,
+  x: 500,
+  duration: 0.8,
+  ease: "power1.in",
+  pointerEvents: "none",
+});
+menuTl.from(menuItems, {
+  duration: 0.5,
+  opacity: 0,
+  x: 50,
+  ease: "power1.in",
+  stagger: 0.2,
+});
+closeMenuBtn.addEventListener("click", function () {
+  menuTl.reverse();
 });
