@@ -1,0 +1,22 @@
+# Node modules and lockfiles
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+
+# If you want to ignore package files (as requested)
+package.json
+
+# Prettier artifacts and configs
+.prettierrc
+.prettierignore
+.prettier-cache
+.prettier_cache
+.prettiercache
+
+# Build / cache folders
+dist/
+build/
+.cache/
+.vscode/
