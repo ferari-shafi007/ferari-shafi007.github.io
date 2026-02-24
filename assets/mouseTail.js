@@ -3,7 +3,7 @@ let mouseTail = document.querySelector("#mouseTail");
 document.addEventListener("mousemove", (e) => {
   let x = e.clientX;
   let y = e.clientY;
-  console.log(`Mouse position: (${x}, ${y})`);
+  // console.log(`Mouse position: (${x}, ${y})`);
 
   gsap.to(mouseTail, {
     x: x,

@@ -22,30 +22,24 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!-- all js libraries starts here  -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"
-      defer
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <!-- three.js library (synchronous, before custom scripts) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+      integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+
     <!-- custom js starts here -->
     <script src="./script.js" defer></script>
     <script src="assets/mouseTail.js" defer></script>
     <script src="assets/gsap.js" defer></script>
-    <script src="assets/threejs.js" defer></script>
   </head>
   <body>
     <div id="welcome">
@@ -78,13 +72,16 @@
         <div class="hero-content">
           <div id="threedObject">
             <canvas id="draw"></canvas>
+            <!-- <canvas id="robot"></canvas> -->
           </div>
-          <h1 class="hero-title">Hi, I'm Shafi</h1>
-          <p class="hero-subtitle">A passionate web developer.</p>
-          <a href="#projects" class="hero-link">View My Work</a>
+          <div class="titles">
+            <h1 class="hero-title">Hi, I'm Shafi</h1>
+            <p class="hero-subtitle">A passionate web developer.</p>
+          </div>
         </div>
       </section>
       <section id="about"></section>
     </div>
+    <script src="assets/threejs.js"></script>
   </body>
 </html>
