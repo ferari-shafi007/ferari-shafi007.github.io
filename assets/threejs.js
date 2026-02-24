@@ -5,15 +5,10 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   1000
 );
-const loader = new THREE.TextureLoader();
-
-const texture = loader.load("./assets/img/Mesa de trabajo 2.png");
-texture.colorSpace = THREE.SRGBColorSpace;
-
-const geometry = new THREE.CylinderGeometry(1.5, 1.5, 1.5, 64, 1, false);
-const material = new THREE.MeshBasicMaterial({ map: texture });
-const cylinder = new THREE.Mesh(geometry, material);
-scene.add(cylinder);
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: 0x7bff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
 let canvas = document.querySelector("#draw");
 camera.position.z = 5;
 const renderer = new THREE.WebGLRenderer({
@@ -23,9 +18,30 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 
+// Dynamically load OrbitControls (no change to index.html required)
+let controls = null;
+(function loadOrbitControls() {
+  const script = document.createElement("script");
+  script.src = "three/addons/controls/OrbitControls.js";
+  script.onload = () => {
+    if (THREE.OrbitControls) {
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.screenSpacePanning = false;
+      controls.minDistance = 2;
+      controls.maxDistance = 20;
+      controls.target.set(0, 0, 0);
+      controls.update();
+    }
+  };
+  document.head.appendChild(script);
+})();
+
 function animate(time) {
+  if (controls) controls.update();
   renderer.render(scene, camera);
-  // cylinder.rotation.x = time / 2000;
-  cylinder.rotation.y = time / 5000;
+  cube.rotation.x = time / 2000;
+  cube.rotation.y = time / 1000;
 }
 renderer.setAnimationLoop(animate);
