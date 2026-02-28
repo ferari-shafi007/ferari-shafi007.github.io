@@ -17,7 +17,7 @@ tl.from(
     y: 100,
     ease: "power1.in",
   },
-  "-=0.5",
+  "-=0.5"
 ); // Start this animation 0.5 seconds before the previous one ends
 // After the animation is complete, hide the welcome screen
 tl.to(welcomescreen, {
@@ -36,12 +36,12 @@ var openMenuBtn = document.querySelector(".fa-bars-staggered");
 var closeMenuBtn = document.querySelector(".fa-xmark");
 var menuItems = document.querySelectorAll(".nav-links li");
 let menuTl = gsap.timeline({ paused: true });
-openMenuBtn.addEventListener("click", function () {
+openMenuBtn.addEventListener("click", function (e) {
   menuTl.play();
 });
 menuTl.from(menu, {
   duration: 0.5,
-  x: 500,
+  x: "100%",
   duration: 0.8,
   ease: "power1.in",
   pointerEvents: "none",
