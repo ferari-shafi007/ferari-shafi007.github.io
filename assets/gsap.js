@@ -17,7 +17,7 @@ tl.from(
     y: 100,
     ease: "power1.in",
   },
-  "-=0.5"
+  "-=0.5",
 ); // Start this animation 0.5 seconds before the previous one ends
 // After the animation is complete, hide the welcome screen
 tl.to(welcomescreen, {
@@ -55,4 +55,36 @@ menuTl.from(menuItems, {
 });
 closeMenuBtn.addEventListener("click", function () {
   menuTl.reverse();
+});
+
+window.addEventListener("wheel", function (e) {
+  let arrow = document.querySelectorAll(".arrow img");
+  let marque = document.querySelectorAll("#marque .contents");
+  if (e.deltaY > 0) {
+    console.log("Scrolling down");
+    gsap.to(marque, {
+      transform: "translateX(0%)",
+      duration: 10,
+      repeat: -1,
+      ease: "none",
+    });
+
+    gsap.to(arrow, {
+      rotate: 0,
+      duration: 0.5,
+    });
+  }
+  if (e.deltaY < 0) {
+    gsap.to(marque, {
+      transform: "translateX(-200%)",
+      duration: 10,
+      repeat: -1,
+      ease: "none",
+    });
+    gsap.to(arrow, {
+      rotate: 180,
+      duration: 0.5,
+    });
+    console.log("Scrolling up");
+  }
 });

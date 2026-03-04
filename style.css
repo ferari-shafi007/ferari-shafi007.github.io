@@ -220,3 +220,29 @@ nav ul li a:hover {
   height: 100vh;
   background-color: var(--background-color);
 }
+
+#marque {
+  background-color: var(--primary-color);
+}
+#marque .contents {
+  display: flex;
+  padding: 20px 10px;
+  gap: 20px;
+  font-size: 3.5vmax;
+  color: var(--background-color);
+  gap: 30px;
+  align-items: center;
+  transform: translateX(-100%);
+}
+.marque-content {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+}
+.arrow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+.arrow img {
+  width: 60px;
+}
